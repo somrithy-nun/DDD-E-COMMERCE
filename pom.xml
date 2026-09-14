@@ -20,7 +20,7 @@
     </modules>
 
     <properties>
-        <java.version>25</java.version>
+        <java.version>21</java.version>
         <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
     </properties>
 
@@ -36,11 +36,41 @@
                 <artifactId>order-domain-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>order-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>order-service-restapi</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>order-service-messaging</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>order-service-persistence</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>common-restapi</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.36</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -52,6 +82,38 @@
                 <configuration>
                     <release>${java.version}</release>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>default-compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                        <configuration>
+                            <annotationProcessorPaths>
+                                <path>
+                                    <groupId>org.projectlombok</groupId>
+                                    <artifactId>lombok</artifactId>
+                                </path>
+                            </annotationProcessorPaths>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>default-testCompile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>testCompile</goal>
+                        </goals>
+                        <configuration>
+                            <annotationProcessorPaths>
+                                <path>
+                                    <groupId>org.projectlombok</groupId>
+                                    <artifactId>lombok</artifactId>
+                                </path>
+                            </annotationProcessorPaths>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

@@ -10,5 +10,11 @@
     </parent>
 
     <artifactId>order-service-messaging</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>dtwg.mptc</groupId>
+            <artifactId>order-application-service</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
