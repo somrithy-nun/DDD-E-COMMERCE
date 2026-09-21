@@ -1,4 +1,4 @@
-package dtwg.mptc.ecommerce.order.persistence.adaptor;
+package dtwg.mptc.ecommerce.order.persistence.adapter;
 
 import dtwg.mptc.ecommerce.domain.entity.Customer;
 import dtwg.mptc.ecommerce.order.domain.port.output.CustomerRepository;
@@ -12,7 +12,7 @@ import java.util.UUID;
 
 @RequiredArgsConstructor
 @Repository
-public class CustomerRepositoryAdaptor implements CustomerRepository {
+public class CustomerRepositoryAdapter implements CustomerRepository {
 
     private  final CustomerJpaRepository customerJpaRepository;
     private  final OrderPersistenceMapper orderPersistenceMapper;
