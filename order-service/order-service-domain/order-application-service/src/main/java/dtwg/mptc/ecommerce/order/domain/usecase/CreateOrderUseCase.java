@@ -1,19 +1,56 @@
 package dtwg.mptc.ecommerce.order.domain.usecase;
 
+import dtwg.mptc.ecommerce.order.domain.entity.Business;
+import dtwg.mptc.ecommerce.order.domain.entity.Product;
+import dtwg.mptc.ecommerce.order.domain.exception.OrderDomainException;
+import dtwg.mptc.ecommerce.order.domain.valueobject.BusinessId;
+import dtwg.mptc.ecommerce.order.domain.valueobject.Money;
+import dtwg.mptc.ecommerce.order.domain.valueobject.ProductId;
 import dtwg.mptc.ecommerce.order.domain.dto.CreateOrderCommand;
 import dtwg.mptc.ecommerce.order.domain.dto.CreateOrderResult;
+import dtwg.mptc.ecommerce.order.domain.port.output.BusinessRepository;
+import dtwg.mptc.ecommerce.order.domain.port.output.CustomerRepository;
+import dtwg.mptc.ecommerce.order.domain.port.output.OrderRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.UUID;
 
 @Component
 @Slf4j
+@RequiredArgsConstructor
 public class CreateOrderUseCase {
 // CreateOrderUseCase is domain call secondary for database job
 
+    private  final OrderRepository orderRepository;
+    private  final CustomerRepository customerRepository;
+    private  final BusinessRepository businessRepository;
+
     public CreateOrderResult execute(CreateOrderCommand createOrderCommand) {
         log.info("Execute CreateOrderUseCase : {}", createOrderCommand);
+
+        //validate customer
+        customerRepository.findCustomer(createOrderCommand.customerId())
+                .orElseThrow(()-> new OrderDomainException("Could Not Find Customer with ID:" + createOrderCommand.customerId()));
+
+        List<Product> products = createOrderCommand.items().stream()
+                .map(commandOrderItem -> Product.builder()
+                        .id(new ProductId(commandOrderItem.productId()))
+                        .price(new Money(commandOrderItem.price()))
+                        .build()).toList();
+
+        //validate business
+        Business business = Business.builder()
+                .id(new BusinessId(createOrderCommand.businessId()))
+                .products(products)
+                .build();
+        business = businessRepository.findBusiness(business)
+                .orElseThrow(()-> new OrderDomainException("Could Not Find Business with ID:" + createOrderCommand.businessId()));
+
+
+        log.info("Founded Business : {}", business);
         return new CreateOrderResult(UUID.randomUUID());
     }
 

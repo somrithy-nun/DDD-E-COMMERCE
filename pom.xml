@@ -63,6 +63,11 @@
                 <artifactId>common-restapi</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>common-persistence</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

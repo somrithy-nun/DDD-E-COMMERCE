@@ -8,12 +8,12 @@ import lombok.Setter;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-@Getter
 @Setter
 @NoArgsConstructor
+@Getter
 @IdClass(BusinessIdEntity.class)
 @Entity
-@Table(name = "business")
+@Table(name = "businesses")
 public class BusinessEntity {
 
     @Id
@@ -22,7 +22,7 @@ public class BusinessEntity {
     @Id
     private UUID productId;
 
-    private boolean businessActive;
+    private Boolean businessActive;
     private String productName;
     private BigDecimal productPrice;
 

@@ -10,5 +10,11 @@
     </parent>
 
     <artifactId>common-persistence</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>dtwg.mptc</groupId>
+            <artifactId>common-restapi</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
