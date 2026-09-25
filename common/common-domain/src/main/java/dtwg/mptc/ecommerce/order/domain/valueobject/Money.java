@@ -43,12 +43,12 @@ public record Money(
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Money money = (Money) o;
-        return Objects.equals(amount, money.amount);
+        return Objects.equals(setScale(amount),setScale(money.amount));
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(amount);
+        return Objects.hashCode(setScale(amount));
     }
 
 }

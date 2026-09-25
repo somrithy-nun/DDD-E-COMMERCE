@@ -2,6 +2,8 @@ package dtwg.mptc.ecommerce.order.persistence.mapper;
 
 import dtwg.mptc.ecommerce.order.domain.entity.Order;
 import dtwg.mptc.ecommerce.order.domain.entity.OrderItem;
+import dtwg.mptc.ecommerce.order.domain.valueobject.StreetAddress;
+import dtwg.mptc.ecommerce.order.persistence.entity.OrderAddressEntity;
 import dtwg.mptc.ecommerce.order.persistence.entity.OrderEntity;
 import dtwg.mptc.ecommerce.order.persistence.entity.OrderItemEntity;
 import org.mapstruct.Mapper;
@@ -21,8 +23,12 @@ public interface OrderPersistenceMapper {
     @Mapping(source = "businessId.value", target = "businessId")
     @Mapping(source = "price.amount", target = "price")
     @Mapping(source = "trackingId.value", target = "trackingId")
+    @Mapping(source = "deliveryAddress", target = "orderAddress")
     @Mapping(source = "failureMessages", target = "failureMessages", qualifiedByName = "mapFailureMessages")
     OrderEntity orderToOrderEntity(Order order);
+
+    @Mapping(target = "id", expression = "java(UUID.randomUUID())")
+    OrderAddressEntity deliveryAddressToOrderAddressEntity(StreetAddress streetAddress);
 
 //    @Named("mapFailureMessages")
 //    default String mapFailureMessages(List<String> failureMessages) {
