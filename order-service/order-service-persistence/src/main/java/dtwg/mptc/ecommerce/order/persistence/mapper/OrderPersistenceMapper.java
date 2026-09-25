@@ -8,6 +8,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,10 +24,10 @@ public interface OrderPersistenceMapper {
     @Mapping(source = "failureMessages", target = "failureMessages", qualifiedByName = "mapFailureMessages")
     OrderEntity orderToOrderEntity(Order order);
 
-    @Named("mapFailureMessages")
-    default String mapFailureMessages(List<String> failureMessages) {
-        return String.join(",", failureMessages);
-    }
+//    @Named("mapFailureMessages")
+//    default String mapFailureMessages(List<String> failureMessages) {
+//        return String.join(",", failureMessages);
+//    }
 
     @Mapping(source = "id.value", target = "id")
     @Mapping(source = "product.id.value", target = "productId")
@@ -51,8 +52,27 @@ public interface OrderPersistenceMapper {
     @Mapping(target = "subTotal.amount", source = "subTotal")
     OrderItem orderItemEntityToOrderItem(OrderItemEntity orderItemEntity);
 
+//    @Named("mapFailureMessagesToList")
+//    default List<String> mapFailureMessagesToList(String failureMessages) {
+//        return Arrays.stream(failureMessages.split(",")).toList();
+//    }
+
+
+    @Named("mapFailureMessages")
+    default String mapFailureMessages(List<String> failureMessages) {
+        if (failureMessages == null || failureMessages.isEmpty()) {
+            return null;
+        }
+        return String.join(",", failureMessages);
+    }
+
     @Named("mapFailureMessagesToList")
     default List<String> mapFailureMessagesToList(String failureMessages) {
-        return Arrays.stream(failureMessages.split(",")).toList();
+        if (failureMessages == null || failureMessages.isBlank()) {
+            return new ArrayList<>();
+        }
+        return new ArrayList<>(Arrays.stream(failureMessages.split(",")).toList());
     }
+
+
 }

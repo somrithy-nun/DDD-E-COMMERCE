@@ -2,6 +2,7 @@ package dtwg.mptc.ecommerce.order.domain.valueobject;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Objects;
 
 public record Money(
         BigDecimal amount
@@ -35,6 +36,19 @@ public record Money(
     //Round Money
     private BigDecimal setScale(BigDecimal inputAmount){
         return inputAmount.setScale(2, RoundingMode.HALF_EVEN);
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Money money = (Money) o;
+        return Objects.equals(amount, money.amount);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(amount);
     }
 
 }

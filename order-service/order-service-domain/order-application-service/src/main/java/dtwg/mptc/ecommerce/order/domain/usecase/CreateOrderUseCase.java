@@ -1,8 +1,12 @@
 package dtwg.mptc.ecommerce.order.domain.usecase;
 
 import dtwg.mptc.ecommerce.order.domain.entity.Business;
+import dtwg.mptc.ecommerce.order.domain.entity.Order;
 import dtwg.mptc.ecommerce.order.domain.entity.Product;
+import dtwg.mptc.ecommerce.order.domain.event.OrderCreatedEvent;
 import dtwg.mptc.ecommerce.order.domain.exception.OrderDomainException;
+import dtwg.mptc.ecommerce.order.domain.mapper.OrderDomainMapper;
+import dtwg.mptc.ecommerce.order.domain.service.OrderDomainService;
 import dtwg.mptc.ecommerce.order.domain.valueobject.BusinessId;
 import dtwg.mptc.ecommerce.order.domain.valueobject.Money;
 import dtwg.mptc.ecommerce.order.domain.valueobject.ProductId;
@@ -23,6 +27,9 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class CreateOrderUseCase {
 // CreateOrderUseCase is domain call secondary for database job
+
+    private  final OrderDomainService orderDomainService;
+    private  final OrderDomainMapper orderDomainMapper;
 
     private  final OrderRepository orderRepository;
     private  final CustomerRepository customerRepository;
@@ -51,7 +58,19 @@ public class CreateOrderUseCase {
 
 
         log.info("Founded Business : {}", business);
-        return new CreateOrderResult(UUID.randomUUID());
+
+        //Invoke order
+        Order order= orderDomainMapper.createOrderCommandToOrder(createOrderCommand);
+        OrderCreatedEvent orderCreatedEvent = orderDomainService.validateAndInitiateOrder(order,business);
+        log.info("Order Created : {}",orderCreatedEvent.getOrder().getId());
+
+
+    // save order into database
+        Order savedOrder = orderRepository.saveOrder(order);
+        if (savedOrder == null){
+            throw new OrderDomainException("could not save order into database");
+        }
+        return new CreateOrderResult(savedOrder.getId().value());
     }
 
 
