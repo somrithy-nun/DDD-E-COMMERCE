@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.order.persistence.adapter;
 
-import dtwg.mptc.ecommerce.order.domain.entity.Business;
-import dtwg.mptc.ecommerce.order.domain.port.output.BusinessRepository;
+import dtwg.mptc.ecommerce.common.domain.entity.Business;
+import dtwg.mptc.ecommerce.common.domain.port.output.BusinessRepository;
 import dtwg.mptc.ecommerce.order.persistence.entity.BusinessEntity;
 import dtwg.mptc.ecommerce.order.persistence.mapper.BusinessPersistenceMapper;
 import dtwg.mptc.ecommerce.order.persistence.repository.BusinessJpaRepository;
