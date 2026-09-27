@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.order.restapi.exception;
 
 
-import dtwg.mptc.ecommerce.common.domain.exception.OrderDomainException;
+import dtwg.mptc.ecommerce.order.domain.exception.OrderDomainException;
 import dtwg.mptc.ecommerce.persistence.business.exception.BusinessPersistenceException;
 import dtwg.mptc.ecommerce.restapi.dto.RestApiErrorResponse;
 import dtwg.mptc.ecommerce.restapi.exception.GlobalExceptionHandler;
