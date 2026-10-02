@@ -51,4 +51,12 @@ public record Money(
         return Objects.hashCode(setScale(amount));
     }
 
+    public boolean isGreaterThan(Money money) {
+        return amount.compareTo(money.amount) > 0;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
 }

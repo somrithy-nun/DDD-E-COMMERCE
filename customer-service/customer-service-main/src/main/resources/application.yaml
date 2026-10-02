@@ -1,7 +1,7 @@
 #change customer service running port
 
 server:
-  port: 8551
+  port: 0
 
 spring:
   application:

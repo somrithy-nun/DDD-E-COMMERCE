@@ -18,6 +18,7 @@
         <module>common</module>
         <module>order-service</module>
         <module>customer-service</module>
+        <module>payment-service</module>
     </modules>
 
     <properties>
@@ -90,6 +91,22 @@
             <dependency>
                 <groupId>dtwg.mptc</groupId>
                 <artifactId>customer-service-persistence</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--    This payment Dependency    -->
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>payment-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>payment-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>payment-service-persistence</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
