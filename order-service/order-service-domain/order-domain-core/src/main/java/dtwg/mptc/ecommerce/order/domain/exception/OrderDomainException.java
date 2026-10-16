@@ -1,6 +1,6 @@
 package dtwg.mptc.ecommerce.order.domain.exception;
 
-import dtwg.mptc.ecommerce.domain.exception.DomainException;
+import dtwg.mptc.ecommerce.business.domain.exception.DomainException;
 
 
 public class OrderDomainException  extends  DomainException{

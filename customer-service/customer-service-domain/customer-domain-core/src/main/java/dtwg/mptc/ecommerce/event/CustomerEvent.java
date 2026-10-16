@@ -1,6 +1,6 @@
 package dtwg.mptc.ecommerce.event;
 
-import dtwg.mptc.ecommerce.domain.event.DomainEvent;
+import dtwg.mptc.ecommerce.business.domain.event.DomainEvent;
 import dtwg.mptc.ecommerce.entity.Customer;
 
 public abstract class CustomerEvent implements DomainEvent<Customer> {

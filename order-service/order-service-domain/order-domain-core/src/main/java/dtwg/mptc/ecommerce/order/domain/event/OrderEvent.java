@@ -1,6 +1,6 @@
 package dtwg.mptc.ecommerce.order.domain.event;
 
-import dtwg.mptc.ecommerce.domain.event.DomainEvent;
+import dtwg.mptc.ecommerce.business.domain.event.DomainEvent;
 
 import dtwg.mptc.ecommerce.order.domain.entity.Order;
 

@@ -1,9 +1,9 @@
 package dtwg.mptc.ecommerce.payment.domain.entity;
 
-import dtwg.mptc.ecommerce.domain.entity.BaseEntity;
-import dtwg.mptc.ecommerce.domain.valueobject.CreditEntryId;
-import dtwg.mptc.ecommerce.domain.valueobject.CustomerId;
-import dtwg.mptc.ecommerce.domain.valueobject.Money;
+import dtwg.mptc.ecommerce.business.domain.entity.BaseEntity;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CreditEntryId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CustomerId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.Money;
 import dtwg.mptc.ecommerce.payment.domain.exception.PaymentDomainException;
 
 public class CreditEntry extends BaseEntity<CreditEntryId> {

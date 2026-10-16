@@ -6,8 +6,8 @@ import dtwg.mptc.ecommerce.customer.domain.exception.CustomerAlreadyExistsExcept
 import dtwg.mptc.ecommerce.customer.domain.exception.CustomerNotFoundException;
 import dtwg.mptc.ecommerce.customer.domain.mapper.CustomerDataMapper;
 import dtwg.mptc.ecommerce.customer.domain.port.output.CustomerRepository;
-import dtwg.mptc.ecommerce.domain.valueobject.CustomerId;
-import dtwg.mptc.ecommerce.domain.valueobject.Email;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CustomerId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.Email;
 import dtwg.mptc.ecommerce.entity.Customer;
 import dtwg.mptc.ecommerce.event.CustomerUpdatedEvent;
 import dtwg.mptc.ecommerce.service.CustomerDomainService;

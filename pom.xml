@@ -20,6 +20,7 @@
         <module>customer-service</module>
         <module>payment-service</module>
         <module>business-service</module>
+        <module>gateway-service</module>
     </modules>
 
     <properties>
@@ -110,6 +111,33 @@
                 <artifactId>payment-service-persistence</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <!--    End payment Dependency    -->
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>business-service-main</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>business-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>business-service-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>business-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>business-service-persistence</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--    End Business Dependency    -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>

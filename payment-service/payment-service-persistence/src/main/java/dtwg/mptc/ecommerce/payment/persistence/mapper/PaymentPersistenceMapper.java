@@ -1,9 +1,9 @@
 package dtwg.mptc.ecommerce.payment.persistence.mapper;
 
-import dtwg.mptc.ecommerce.domain.valueobject.CustomerId;
-import dtwg.mptc.ecommerce.domain.valueobject.Money;
-import dtwg.mptc.ecommerce.domain.valueobject.OrderId;
-import dtwg.mptc.ecommerce.domain.valueobject.PaymentId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CustomerId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.Money;
+import dtwg.mptc.ecommerce.business.domain.valueobject.OrderId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.PaymentId;
 import dtwg.mptc.ecommerce.payment.domain.entity.Payment;
 import dtwg.mptc.ecommerce.payment.persistence.entity.PaymentEntity;
 import org.springframework.stereotype.Component;

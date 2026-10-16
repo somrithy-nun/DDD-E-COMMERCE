@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.service;
 
-import dtwg.mptc.ecommerce.domain.valueobject.Email;
-import dtwg.mptc.ecommerce.domain.valueobject.PhoneNumber;
+import dtwg.mptc.ecommerce.business.domain.valueobject.Email;
+import dtwg.mptc.ecommerce.business.domain.valueobject.PhoneNumber;
 import dtwg.mptc.ecommerce.entity.Customer;
 import dtwg.mptc.ecommerce.event.CustomerCreatedEvent;
 import dtwg.mptc.ecommerce.event.CustomerDeactivatedEvent;

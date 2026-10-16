@@ -1,10 +1,10 @@
 package dtwg.mptc.ecommerce.order.domain.entity;
 
-import dtwg.mptc.ecommerce.domain.entity.BaseEntity;
+import dtwg.mptc.ecommerce.business.domain.entity.BaseEntity;
 
-import dtwg.mptc.ecommerce.domain.valueobject.Money;
-import dtwg.mptc.ecommerce.domain.valueobject.OrderId;
-import dtwg.mptc.ecommerce.domain.valueobject.OrderItemId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.Money;
+import dtwg.mptc.ecommerce.business.domain.valueobject.OrderId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.OrderItemId;
 
 public class OrderItem extends BaseEntity<OrderItemId> {
 

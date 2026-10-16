@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.customer.domain.dto;
 
-import dtwg.mptc.ecommerce.domain.valueobject.CustomerStatus;
-import dtwg.mptc.ecommerce.domain.valueobject.LoyaltyTier;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CustomerStatus;
+import dtwg.mptc.ecommerce.business.domain.valueobject.LoyaltyTier;
 
 import java.util.UUID;
 

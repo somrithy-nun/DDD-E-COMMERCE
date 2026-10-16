@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.payment.domain.dto;
 
 
-import dtwg.mptc.ecommerce.domain.valueobject.PaymentStatus;
+import dtwg.mptc.ecommerce.business.domain.valueobject.PaymentStatus;
 
 import java.util.UUID;
 

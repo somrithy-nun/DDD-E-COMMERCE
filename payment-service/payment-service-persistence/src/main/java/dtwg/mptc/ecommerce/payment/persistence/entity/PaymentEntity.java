@@ -1,6 +1,6 @@
 package dtwg.mptc.ecommerce.payment.persistence.entity;
 
-import dtwg.mptc.ecommerce.domain.valueobject.PaymentStatus;
+import dtwg.mptc.ecommerce.business.domain.valueobject.PaymentStatus;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.EnumType;

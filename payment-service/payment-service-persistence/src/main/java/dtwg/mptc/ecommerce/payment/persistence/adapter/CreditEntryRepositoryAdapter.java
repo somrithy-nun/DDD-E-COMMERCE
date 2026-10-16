@@ -1,6 +1,6 @@
 package dtwg.mptc.ecommerce.payment.persistence.adapter;
 
-import dtwg.mptc.ecommerce.domain.valueobject.CustomerId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CustomerId;
 import dtwg.mptc.ecommerce.payment.domain.entity.CreditEntry;
 import dtwg.mptc.ecommerce.payment.domain.output.CreditEntityRepository;
 import dtwg.mptc.ecommerce.payment.persistence.entity.CreditEntryEntity;

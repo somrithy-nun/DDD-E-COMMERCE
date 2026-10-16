@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.customer.persistence.entity;
 
-import dtwg.mptc.ecommerce.domain.valueobject.CustomerStatus;
-import dtwg.mptc.ecommerce.domain.valueobject.LoyaltyTier;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CustomerStatus;
+import dtwg.mptc.ecommerce.business.domain.valueobject.LoyaltyTier;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

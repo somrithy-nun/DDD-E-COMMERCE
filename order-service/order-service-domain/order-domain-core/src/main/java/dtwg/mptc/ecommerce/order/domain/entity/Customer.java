@@ -1,8 +1,8 @@
 package dtwg.mptc.ecommerce.order.domain.entity;
 
-import dtwg.mptc.ecommerce.domain.entity.AggregateRoot;
+import dtwg.mptc.ecommerce.business.domain.entity.AggregateRoot;
 
-import dtwg.mptc.ecommerce.domain.valueobject.CustomerId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CustomerId;
 
 public class Customer extends AggregateRoot<CustomerId>{
 

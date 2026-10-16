@@ -1,11 +1,11 @@
 package dtwg.mptc.ecommerce.payment.domain.entity;
 
 
-import dtwg.mptc.ecommerce.domain.entity.BaseEntity;
-import dtwg.mptc.ecommerce.domain.valueobject.CreditHistoryId;
-import dtwg.mptc.ecommerce.domain.valueobject.CustomerId;
-import dtwg.mptc.ecommerce.domain.valueobject.Money;
-import dtwg.mptc.ecommerce.domain.valueobject.TransactionType;
+import dtwg.mptc.ecommerce.business.domain.entity.BaseEntity;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CreditHistoryId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CustomerId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.Money;
+import dtwg.mptc.ecommerce.business.domain.valueobject.TransactionType;
 
 public class CreditHistory extends BaseEntity<CreditHistoryId> {
 

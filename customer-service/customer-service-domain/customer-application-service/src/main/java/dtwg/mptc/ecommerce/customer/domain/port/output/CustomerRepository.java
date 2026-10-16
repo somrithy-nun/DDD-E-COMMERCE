@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.customer.domain.port.output;
 
 
-import dtwg.mptc.ecommerce.domain.valueobject.CustomerId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CustomerId;
 import dtwg.mptc.ecommerce.entity.Customer;
 
 import java.util.Optional;

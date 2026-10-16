@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.order.domain.entity;
 
-import dtwg.mptc.ecommerce.domain.entity.AggregateRoot;
-import dtwg.mptc.ecommerce.domain.valueobject.*;
+import dtwg.mptc.ecommerce.business.domain.entity.AggregateRoot;
+import dtwg.mptc.ecommerce.business.domain.valueobject.*;
 import dtwg.mptc.ecommerce.order.domain.exception.OrderDomainException;
 
 import java.util.List;

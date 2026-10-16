@@ -1,8 +1,8 @@
 package dtwg.mptc.ecommerce.payment.domain.entity;
 
 
-import dtwg.mptc.ecommerce.domain.entity.AggregateRoot;
-import dtwg.mptc.ecommerce.domain.valueobject.*;
+import dtwg.mptc.ecommerce.business.domain.entity.AggregateRoot;
+import dtwg.mptc.ecommerce.business.domain.valueobject.*;
 import dtwg.mptc.ecommerce.payment.domain.exception.PaymentDomainException;
 
 import java.time.ZoneId;

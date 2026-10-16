@@ -3,7 +3,7 @@ package dtwg.mptc.ecommerce.customer.domain.usecase;
 import dtwg.mptc.ecommerce.customer.domain.dto.DeactivateCustomerCommand;
 import dtwg.mptc.ecommerce.customer.domain.exception.CustomerNotFoundException;
 import dtwg.mptc.ecommerce.customer.domain.port.output.CustomerRepository;
-import dtwg.mptc.ecommerce.domain.valueobject.CustomerId;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CustomerId;
 import dtwg.mptc.ecommerce.entity.Customer;
 import dtwg.mptc.ecommerce.event.CustomerDeactivatedEvent;
 import dtwg.mptc.ecommerce.service.CustomerDomainService;

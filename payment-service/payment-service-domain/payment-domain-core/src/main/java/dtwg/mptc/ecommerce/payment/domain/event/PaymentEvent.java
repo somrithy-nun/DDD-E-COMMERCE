@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.payment.domain.event;
 
 
-import dtwg.mptc.ecommerce.domain.event.DomainEvent;
+import dtwg.mptc.ecommerce.business.domain.event.DomainEvent;
 import dtwg.mptc.ecommerce.payment.domain.entity.Payment;
 
 import java.time.ZonedDateTime;

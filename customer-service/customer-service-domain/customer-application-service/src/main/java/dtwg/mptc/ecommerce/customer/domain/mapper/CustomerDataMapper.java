@@ -1,8 +1,8 @@
 package dtwg.mptc.ecommerce.customer.domain.mapper;
 
 import dtwg.mptc.ecommerce.customer.domain.dto.CreateCustomerCommand;
-import dtwg.mptc.ecommerce.domain.valueobject.Email;
-import dtwg.mptc.ecommerce.domain.valueobject.PhoneNumber;
+import dtwg.mptc.ecommerce.business.domain.valueobject.Email;
+import dtwg.mptc.ecommerce.business.domain.valueobject.PhoneNumber;
 import dtwg.mptc.ecommerce.entity.Customer;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

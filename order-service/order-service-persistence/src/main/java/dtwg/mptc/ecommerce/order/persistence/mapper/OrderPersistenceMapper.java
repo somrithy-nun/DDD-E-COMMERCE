@@ -2,7 +2,7 @@ package dtwg.mptc.ecommerce.order.persistence.mapper;
 
 import dtwg.mptc.ecommerce.order.domain.entity.Order;
 import dtwg.mptc.ecommerce.order.domain.entity.OrderItem;
-import dtwg.mptc.ecommerce.domain.valueobject.StreetAddress;
+import dtwg.mptc.ecommerce.business.domain.valueobject.StreetAddress;
 import dtwg.mptc.ecommerce.order.persistence.entity.OrderAddressEntity;
 import dtwg.mptc.ecommerce.order.persistence.entity.OrderEntity;
 import dtwg.mptc.ecommerce.order.persistence.entity.OrderItemEntity;

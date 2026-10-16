@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.payment.domain.exception;
 
 
-import dtwg.mptc.ecommerce.domain.exception.DomainException;
+import dtwg.mptc.ecommerce.business.domain.exception.DomainException;
 
 public class PaymentDomainException extends DomainException {
   public PaymentDomainException(String message) {

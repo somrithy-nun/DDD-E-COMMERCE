@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.payment.domain.service;
 
 
-import dtwg.mptc.ecommerce.domain.valueobject.PaymentStatus;
+import dtwg.mptc.ecommerce.business.domain.valueobject.PaymentStatus;
 import dtwg.mptc.ecommerce.payment.domain.entity.CreditEntry;
 import dtwg.mptc.ecommerce.payment.domain.entity.CreditHistory;
 import dtwg.mptc.ecommerce.payment.domain.entity.Payment;

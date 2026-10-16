@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.event;
 
-import dtwg.mptc.ecommerce.domain.event.DomainEvent;
-import dtwg.mptc.ecommerce.domain.valueobject.CustomerId;
+import dtwg.mptc.ecommerce.business.domain.event.DomainEvent;
+import dtwg.mptc.ecommerce.business.domain.valueobject.CustomerId;
 import dtwg.mptc.ecommerce.entity.Customer;
 
 import java.time.ZonedDateTime;
