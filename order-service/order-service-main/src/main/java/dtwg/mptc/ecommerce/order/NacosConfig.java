@@ -24,4 +24,13 @@ public class NacosConfig {
                 "version:" , nacosConfigProps.getVersion()
         );
     }
+
+    @GetMapping("/secured")
+    public Map<String,Object> getConfigs(){
+        return  Map.of(
+                "serviceName:",nacosConfigProps.getName(),
+                "basicInfo:",nacosConfigProps.getBasicInfo(),
+                "version:" , nacosConfigProps.getVersion()
+        );
+    }
 }

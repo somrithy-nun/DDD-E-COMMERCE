@@ -21,6 +21,25 @@ spring:
       username: nacos
       password: nacos
       server-addr: 127.0.0.1:8848
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: https://sso.dtwg.dev/realms/ecommerce
+        registration:
+          ecommerce-postman:
+            provider: keycloak
+            client-id: ecommerce-postman
+#            client-secret: YDdLvthAd1JhyRWrhKOmNThzfFDUKKdg
+            scope:
+              - openid
+              - email
+              - profile
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8585/login/oauth2/code/ecommerce-postman
+
+
 
 management:
   endpoints:
@@ -39,12 +58,12 @@ scalar:
     - title: Customer Service
       url: /customer-service/v3/api-docs
 
-#springdoc:
-#  swagger-ui:
-#    urls:
-#      - name: order-service
-#        display-name: Order Service
-#        url: /order-service/v3/api-docs
-#      - name: customer-service
-#        display-name: Customer Service
-#        url: /customer-service/v3/api-docs
+springdoc:
+  swagger-ui:
+    urls:
+      - name: order-service
+        display-name: Order Service
+        url: /order-service/v3/api-docs
+      - name: customer-service
+        display-name: Customer Service
+        url: /customer-service/v3/api-docs

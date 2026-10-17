@@ -34,3 +34,8 @@ spring:
   config:
     import:
       - nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://sso.dtwg.dev/realms/ecommerce
