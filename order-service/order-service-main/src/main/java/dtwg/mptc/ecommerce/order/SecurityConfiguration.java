@@ -17,7 +17,7 @@ public class SecurityConfiguration {
 
 //  1.Endpoint  (secured , policy , permit )
 
-        http.authorizeHttpRequests(endpoint -> endpoint.requestMatchers("/nacos/config").permitAll().anyRequest().authenticated());
+        http.authorizeHttpRequests(endpoint -> endpoint.requestMatchers("/nacos/config", "/v3/api-docs/**").permitAll().anyRequest().authenticated());
 
 //  2.Stateless
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
@@ -30,7 +30,6 @@ public class SecurityConfiguration {
 
 //  5.Security mechanism
         http.oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()));
-
 
         return http.build();
     }

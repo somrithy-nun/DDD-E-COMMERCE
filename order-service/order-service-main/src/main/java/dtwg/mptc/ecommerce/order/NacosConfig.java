@@ -3,6 +3,8 @@ package dtwg.mptc.ecommerce.order;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,11 +28,13 @@ public class NacosConfig {
     }
 
     @GetMapping("/secured")
-    public Map<String,Object> getConfigs(){
+    public Map<String,Object> getConfigs(@AuthenticationPrincipal Jwt jwt){
         return  Map.of(
                 "serviceName:",nacosConfigProps.getName(),
                 "basicInfo:",nacosConfigProps.getBasicInfo(),
-                "version:" , nacosConfigProps.getVersion()
+                "version:" , nacosConfigProps.getVersion(),
+                "access-token:",jwt.getTokenValue()
+
         );
     }
 }
