@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class KeycloakAdminClientConfig {
+
+    public final static String REALM_NAME = "ecommerce";
+
     @Bean
     public Keycloak keycloak() {
         return KeycloakBuilder.builder()
