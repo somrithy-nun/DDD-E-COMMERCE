@@ -1,5 +1,6 @@
 package dtwg.mptc.ecommerce.user.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import dtwg.mptc.ecommerce.restapi.dto.PageResponse;
 import dtwg.mptc.ecommerce.user.dto.UserCreateRequest;
 import dtwg.mptc.ecommerce.user.dto.UserResponse;
@@ -10,6 +11,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/users")
@@ -57,10 +60,16 @@ public class UserController {
     }
 
 
+    @SentinelResource( )
     @GetMapping
     public PageResponse<UserResponse> getUsers(@RequestParam(defaultValue = "0", required = false) int pageNumber,
                                                @RequestParam(defaultValue = "15", required = false) int pageSize) {
+
         return userService.getUsers(PageRequest.of(pageNumber, pageSize));
+    }
+
+    public Map<String,Object> getUsersFallback(){
+        return Map.of("message","Fallbcak getUsers");
     }
 
 }
