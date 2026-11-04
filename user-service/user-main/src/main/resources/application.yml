@@ -12,6 +12,17 @@ spring:
     import:
       - nacos:${spring.application.name}.${spring.cloud.nacos.config.file-extension}
   cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8081
+        port: 8719
+      eager: true
+      web-context-unify: false
+      scg.fallback:
+        mode: response
+        response-status: 429
+        response-body: '{"error":"Too many requests at gateway"}'
+
     nacos:
       discovery:
         namespace: ${spring.profiles.active}
