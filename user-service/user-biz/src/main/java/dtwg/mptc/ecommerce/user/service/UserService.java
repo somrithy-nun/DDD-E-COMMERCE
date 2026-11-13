@@ -1,6 +1,6 @@
 package dtwg.mptc.ecommerce.user.service;
 
-import dtwg.mptc.ecommerce.restapi.dto.PageResponse;
+import dtwg.mptc.ecommerce.core.PageResponse;
 import dtwg.mptc.ecommerce.user.dto.UserCreateRequest;
 import dtwg.mptc.ecommerce.user.dto.UserResponse;
 import dtwg.mptc.ecommerce.user.dto.UserUpdateRequest;

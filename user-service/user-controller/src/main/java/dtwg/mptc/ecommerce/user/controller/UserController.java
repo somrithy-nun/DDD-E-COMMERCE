@@ -1,7 +1,7 @@
 package dtwg.mptc.ecommerce.user.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import dtwg.mptc.ecommerce.restapi.dto.PageResponse;
+import dtwg.mptc.ecommerce.core.PageResponse;
 import dtwg.mptc.ecommerce.user.dto.UserCreateRequest;
 import dtwg.mptc.ecommerce.user.dto.UserResponse;
 import dtwg.mptc.ecommerce.user.dto.UserUpdateRequest;
