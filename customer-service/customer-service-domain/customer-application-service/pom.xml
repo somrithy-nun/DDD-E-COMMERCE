@@ -18,6 +18,10 @@
         </dependency>
         <dependency>
             <groupId>dtwg.mptc</groupId>
+            <artifactId>common-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dtwg.mptc</groupId>
             <artifactId>customer-service-client</artifactId>
         </dependency>
         <dependency>

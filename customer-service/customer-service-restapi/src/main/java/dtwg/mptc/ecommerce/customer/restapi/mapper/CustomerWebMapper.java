@@ -1,15 +1,8 @@
 package dtwg.mptc.ecommerce.customer.restapi.mapper;
 
-import dtwg.mptc.ecommerce.customer.domain.dto.CreateCustomerCommand;
-import dtwg.mptc.ecommerce.customer.domain.dto.CreateCustomerResult;
-import dtwg.mptc.ecommerce.customer.domain.dto.CustomerResult;
-import dtwg.mptc.ecommerce.customer.domain.dto.UpdateCustomerCommand;
-import dtwg.mptc.ecommerce.customer.domain.dto.UpdateCustomerResult;
-import dtwg.mptc.ecommerce.customer.restapi.dto.CustomerCreateRequest;
-import dtwg.mptc.ecommerce.customer.restapi.dto.CustomerCreateResponse;
-import dtwg.mptc.ecommerce.customer.restapi.dto.CustomerResponse;
-import dtwg.mptc.ecommerce.customer.restapi.dto.CustomerUpdateRequest;
-import dtwg.mptc.ecommerce.customer.restapi.dto.CustomerUpdateResponse;
+import dtwg.mptc.ecommerce.core.PageResponse;
+import dtwg.mptc.ecommerce.customer.domain.dto.*;
+import dtwg.mptc.ecommerce.customer.restapi.dto.*;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -30,5 +23,5 @@ public interface CustomerWebMapper {
 
     CustomerUpdateResponse updateCustomerResultToCustomerUpdateResponse(UpdateCustomerResult updateCustomerResult);
 
-    CustomerResponse customerResultToCustomerResponse(CustomerResult customerResult);
+    PageResponse<CustomerResponse> toCustomerResponse(PageResponse<CustomerResult> result);
 }

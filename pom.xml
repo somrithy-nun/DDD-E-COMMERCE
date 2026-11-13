@@ -75,6 +75,11 @@
                 <artifactId>common-persistence</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>dtwg.mptc</groupId>
+                <artifactId>common-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 <!--    This is customer Dependency        -->
             <dependency>
                 <groupId>dtwg.mptc</groupId>
